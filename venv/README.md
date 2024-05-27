@@ -59,5 +59,6 @@ This project is a simplified version of Aspireit's platform backend, built with 
 
 ## Contact
 
-[Your Name]  
-[Your Email]  
+Shivam Kumar
+Phone : +91 98523 21884
+Email : btech10427.19@bitmesra.ac.in  
