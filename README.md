@@ -15,8 +15,8 @@ This project is a simplified version of Aspireit's platform backend, built with 
 
 1. Clone the repository:
     ```bash
-    git clone <repo-url>
-    cd aspireit_backend
+    git clone https://github.com/shivambitm24x7/Aspireit-Backend-Developer-Intern
+    cd Aspireit-Backend-Developer-Intern/
     ```
 
 2. Set up a virtual environment and install dependencies:
