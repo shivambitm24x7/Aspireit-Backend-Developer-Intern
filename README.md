@@ -40,6 +40,133 @@ This project is a simplified version of Aspireit's platform backend, built with 
 
 ## API Endpoints
 
+ **Access the application**:
+    Open your web browser and navigate to `http://127.0.0.1:5000`.
+
+1. **User Registration**
+
+    - **Endpoint:** `/register`
+    - **Method:** `POST`
+    - **Description:** Registers a new user.
+    - **Request Body:**
+      ```json
+      {
+          "username": "string",
+          "password": "string"
+      }
+      ```
+    - **Response:**
+      - **Success:**
+        ```json
+        {
+            "message": "User registered successfully."
+        }
+        ```
+      - **Failure:**
+        ```json
+        {
+            "message": "User already exists."
+        }
+        ```
+
+2. **User Login**
+
+    - **Endpoint:** `/login`
+    - **Method:** `POST`
+    - **Description:** Logs in a user and returns a JWT token.
+    - **Request Body:**
+      ```json
+      {
+          "username": "string",
+          "password": "string"
+      }
+      ```
+    - **Response:**
+      - **Success:**
+        ```json
+        {
+            "access_token": "jwt_token"
+        }
+        ```
+      - **Failure:**
+        ```json
+        {
+            "message": "Invalid credentials."
+        }
+        ```
+
+3. **Get User Profile**
+
+    - **Endpoint:** `/profile`
+    - **Method:** `GET`
+    - **Description:** Retrieves the authenticated user's profile.
+    - **Headers:**
+      ```json
+      {
+          "Authorization": "Bearer jwt_token"
+      }
+      ```
+    - **Response:**
+      ```json
+      {
+          "username": "string",
+          "profile_data": {
+              // additional profile data of the user
+          }
+      }
+      ```
+
+4. **Update User Profile**
+
+    - **Endpoint:** `/profile`
+    - **Method:** `PUT`
+    - **Description:** Updates the authenticated user's profile.
+    - **Headers:**
+      ```json
+      {
+          "Authorization": "Bearer jwt_token"
+      }
+      ```
+    - **Request Body:**
+      ```json
+      {
+          "profile_data": {
+              // profile data to update
+          }
+      }
+      ```
+    - **Response:**
+      ```json
+      {
+          "message": "Profile updated successfully."
+      }
+      ```
+
+5. **Text Analysis**
+
+    - **Endpoint:** `/analyze`
+    - **Method:** `POST`
+    - **Description:** Analyzes the sentiment of the provided text.
+    - **Headers:**
+      ```json
+      {
+          "Authorization": "Bearer jwt_token"
+      }
+      ```
+    - **Request Body:**
+      ```json
+      {
+          "text": "string"
+      }
+      ```
+    - **Response:**
+      ```json
+      {
+          "polarity": "float",
+          "subjectivity": "float"
+      }
+      ```
+      
 ### Authentication
 
 - `POST /register`: Register a new user
@@ -59,6 +186,6 @@ This project is a simplified version of Aspireit's platform backend, built with 
 
 ## Contact
 
-Shivam Kumar
-Phone : +91 98523 21884
+Shivam Kumar <br>
+Phone : +91 98523 21884 <br>
 Email : btech10427.19@bitmesra.ac.in  
